@@ -1,3 +1,5 @@
+'use strict';
+
 var REG = /<script [^>]*\bscript2bottom[^>]*>[\s\S]*?<\/script>/g;
 
 module.exports = function(ret){
