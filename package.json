@@ -1,6 +1,6 @@
 {
   "name": "feather2-postpackager-script2bottom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "feather2插件，移动script标签至body结束标签上方",
   "main": "index.js",
   "scripts": {
