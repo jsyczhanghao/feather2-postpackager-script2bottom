@@ -1,0 +1,23 @@
+{
+  "name": "feather2-postpackager-script2bottom",
+  "version": "1.0.0",
+  "description": "feather2插件，移动script标签至body结束标签上方",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsyczhanghao/feather2-postpackager-script2bottom.git"
+  },
+  "keywords": [
+    "feather2",
+    "postpackager"
+  ],
+  "author": "jsyczhanghao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsyczhanghao/feather2-postpackager-script2bottom/issues"
+  },
+  "homepage": "https://github.com/jsyczhanghao/feather2-postpackager-script2bottom#readme"
+}
