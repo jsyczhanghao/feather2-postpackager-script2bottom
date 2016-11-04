@@ -11,13 +11,16 @@ cd demo
 npm install feather2-postpackager-script2bottom
 ```
 
-修改feather2项目的conf文件： conf/conf.js
+修改feather2项目的conf文件
 
+
+conf/conf.js
 ```js
 //注，feather2中有一个默认的postpackager的插件，此插件用于收集所有的静态资源，所以这边使用push，而不是直接set
 feather.config.get('postpackager').push('script2bottom');
 ```
 
+index.html
 ```html
 <extends './layout'>
 
@@ -33,8 +36,11 @@ feather.config.get('postpackager').push('script2bottom');
 </block>
 ```
 
-执行后
+```
+feather2 release
+```
 
+index.html
 ```html
 <html>
 <body>
