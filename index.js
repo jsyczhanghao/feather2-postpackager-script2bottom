@@ -13,7 +13,7 @@ module.exports = function(ret){
                 return '';
             });
 
-            if(!file.isPageletLike && /<!--(?:FEATHER )?STATIC POSITION:BOTTOM-->|<\/body>/i.test(content)){
+            if(!file.isPagelet && /<!--(?:FEATHER )?STATIC POSITION:BOTTOM-->|<\/body>/i.test(content)){
                 content = content.replace(/<!--(?:FEATHER )?STATIC POSITION:BOTTOM-->|(<\/body>)/i, function(all, tag){
                     return stack.join('') + (tag || '');
                 });
