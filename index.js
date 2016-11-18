@@ -1,6 +1,6 @@
 'use strict';
 
-var REG = /<script( [^>]*?\bscript2bottom[^>]*)>([\s\S]*?)<\/script>/g;
+var REG = /<script( [^>]*?\b(?:script2)?bottom[^>]*)>([\s\S]*?)<\/script>/g;
 
 module.exports = function(ret){
     feather.util.map(ret.src, function(subpath, file){
@@ -8,7 +8,7 @@ module.exports = function(ret){
             var content = file.getContent(), stack = [];
 
             content = content.replace(REG, function(all, _1, _2){
-                all = '<script' + _1.replace(/\s*script2bottom\s*/, ' ').replace(/\s*$/, '') + '>' + _2 + '</script>';
+                all = '<script' + _1.replace(/\s*(?:script2)?bottom\s*/, ' ').replace(/\s*$/, '') + '>' + _2 + '</script>';
                 stack.push(all);
                 return '';
             });
