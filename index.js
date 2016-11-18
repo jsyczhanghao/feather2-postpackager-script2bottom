@@ -13,9 +13,9 @@ module.exports = function(ret){
                 return '';
             });
 
-            if(!file.isPageletLike && content.indexOf('</body>') > -1){
-                content = content.replace(/<\/body>/i, function(){
-                    return stack.join('') + '</body>';
+            if(!file.isPageletLike && /<!--(?:FEATHER )?STATIC POSITION:BOTTOM-->|<\/body>/i.test(content)){
+                content = content.replace(/<!--(?:FEATHER )?STATIC POSITION:BOTTOM-->|(<\/body>)/i, function(all, tag){
+                    return stack.join('') + (tag || '');
                 });
             }else{
                 content += stack.join('');
