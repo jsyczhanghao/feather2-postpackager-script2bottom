@@ -1,7 +1,7 @@
 feather2-postpackager-script2bottom
 =========================================
 
-feather2的postpackager阶段插件，将带有script2bottom属性的script标签移动至body结束标签的上方
+feather2的postpackager阶段插件，将带有bottom属性的script标签移动至body结束标签的上方
 
 ### 使用
 
@@ -26,7 +26,7 @@ index.html
 
 <!--重写content中的内容-->
 <block 'content'>
-    <script script2bottom>
+    <script bottom>
     require.async('static/index.js');
     </script>
 
@@ -47,7 +47,7 @@ index.html
 <script>
 console.log(123);
 </script>
-<script script2bottom>
+<script>
 require.async('static/index.js');
 </script>
 </body> 
